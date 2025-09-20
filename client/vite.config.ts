@@ -3,11 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "./", // <-- important for Vite build to work on Vercel
-  server: {
-    host: "::",
-    port: 8080,
-  },
+  base: "./",        // Important for deployment in a subfolder
   plugins: [react()],
   resolve: {
     alias: {
